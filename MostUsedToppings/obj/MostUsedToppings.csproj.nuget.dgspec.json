@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\vbexp_000\\Documents\\GitHub\\Olo\\mostusedtoppings\\MostUsedToppings.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\vbexp_000\\Documents\\GitHub\\Olo\\mostusedtoppings\\MostUsedToppings.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vbexp_000\\Documents\\GitHub\\Olo\\mostusedtoppings\\MostUsedToppings.csproj",
+        "projectName": "MostUsedToppings",
+        "projectPath": "C:\\Users\\vbexp_000\\Documents\\GitHub\\Olo\\mostusedtoppings\\MostUsedToppings.csproj",
+        "packagesPath": "C:\\Users\\vbexp_000\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vbexp_000\\Documents\\GitHub\\Olo\\mostusedtoppings\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vbexp_000\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "newtonsoft.json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
