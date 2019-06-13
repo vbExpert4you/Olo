@@ -11,7 +11,7 @@ namespace MostUsedToppings
 
             foreach (var topping in top20)
             {
-                Console.WriteLine(topping);
+                Console.WriteLine($"{topping.Rank}. {topping.Toppings} - {topping.NumRequests}");
             }
         }
     }

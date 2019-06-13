@@ -19,9 +19,9 @@ public class FindToppings
     /// Read the URL and parse the json to retrieve all the toppings, count them and 
     /// return the top number of entries.
     ///</summary>
-    public List<string> RetrieveToppings()
+    public List<ToppingResult> RetrieveToppings()
     {
-        var toppings = new List<string>();
+        var toppings = new List<ToppingResult>();
 
         try
         {
@@ -35,20 +35,32 @@ public class FindToppings
 
                 foreach (var item in jsonArray)
                 {
+                    var toppingCombo = new List<string>();
+
                     foreach (var topping in item["toppings"])
                     {
-                        allToppings.Add(topping.ToString());
+                        toppingCombo.Add(topping.ToString());
                     }
+
+                    allToppings.Add(String.Join(',', toppingCombo.OrderBy(x => x)));
+
                 }
 
                 var groupings = allToppings
                                 .GroupBy(x => x)
                                 .OrderByDescending(x => x.Count());
 
-                toppings = groupings
-                            .Take(_numToFind)
-                            .Select(t => t.Key)
-                            .ToList();
+                for (var i = 0; i < _numToFind; i++)
+                {
+                    var currentCombo = groupings.Skip(i).FirstOrDefault();
+
+                    toppings.Add(new ToppingResult()
+                    {
+                        Rank = i,
+                        Toppings = currentCombo.Key,
+                        NumRequests = currentCombo.Count()                    
+                    });
+                }
 
             }
         }
